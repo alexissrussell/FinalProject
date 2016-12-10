@@ -36,6 +36,7 @@
             position: fixed;
             width: 100%;
             background-color: rgba(0, 0, 0, .7);
+            z-index: 999;
         }
         
         header img {
@@ -118,55 +119,35 @@
         
         .title {
             font-family: 'manhattan_darlingregular', 'Permanent Marker';
-            font-size: 100pt;
+            font-size: 150pt;
             color: white;
             text-align-last: center;
             padding-top: 2%;
             
         }
         
-        .title11 {
+         .title2 {
             font-family: 'manhattan_darlingregular', 'Permanent Marker';
-            font-size: 160pt;
-            color: white;
-            text-align-last: center;
-        }
-        
-        p {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 29pt;
-            color: white;
-            text-align-last: center;
-            
-            text-decoration: none;
-        }
-    
-        .title2 {
-            font-family: 'manhattan_darlingregular', 'Permanent Marker';
-            font-size: 100pt;
+            font-size: 150pt;
             color: #edcbd5;
             text-align: center;
             padding-top: 2%;
             padding-left: 1%
         }
         
-        .location {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 20pt;
-            color: gray;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-around;
-             
+        .title11 {
+            font-family: 'manhattan_darlingregular', 'Permanent Marker';
+            font-size: 175pt;
+            color: white;
+            text-align-last: center;
         }
-        
+
         
         .values {
             font-family: 'Nunito Sans', sans-serif;
             font-size: 22pt;
             margin: 0 auto;
-            text-shadow: 1px 1px black;
+            text-shadow: 2px 2px black;
             padding-top: 2%;
         }
         
@@ -180,14 +161,15 @@
             font-size: 18pt;
             color: white;
             padding: 4%;
+            text-shadow: 2px 2px black;
     }
         
         
         .info {
             font-family: 'Nunito Sans', sans-serif;
             font-size: 20pt;
-            color: white;
             list-style: none;
+            color: black;
         }
         
         fieldset {
@@ -199,15 +181,21 @@
             width: 100%;
         }
     
-        
-        input {
-            height: 25px;
+        placeholder{
             font-family: 'Nunito Sans', sans-serif;
             font-size: 16pt;
+            color: black;
+        }
+        
+        input {
+            height: 28px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18pt;
             padding: 10px;
             transition: all .1s ease-out;
-            color: #edcbd5;
+            color: black;
         }
+        
         
         .wrapp {
             display: flex;
@@ -219,7 +207,7 @@
             line-height: 50px;
             height: 50px;
             text-align: center;
-            width: 255px;
+            width: 275px;
             cursor: pointer;
         }
         
@@ -302,22 +290,66 @@
             margin-top: -5%;
         }
         
+        .location {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 20pt;
+            color: black;
+        }
+        
+        
         .icons{
-            margin-top: 3%;
-            margin-bottom: 1%;
             text-decoration: none;
+            padding: 10%;
+        
         }
         
          #map {
-           width: 40%;
+           width: 50%;
            height: 300px;
            background-color: grey;
+          
+        }
+        .contactmap {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 75%;
+            margin: 0 auto;}
+        
+     
+        .container {
+            font-family: 'manhattan_darlingregular', 'Permanent Marker';
+            font-size: 35pt;
+            color: black;
+            width: 60vw;
+            max-width: 400px;
             margin: 0 auto;
-             z-index: 3;
-             position: sticky;
-            
-           
-         }
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            }
+        
+        
+         .button {
+          flex: 1 1 ;
+          margin: 10px;
+          padding: 20px;
+          border: 3px solid black;
+          text-align: center;
+          text-transform: uppercase;
+          position: relative;
+          overflow:hidden;
+          cursor: pointer;
+        }
+       
+        
+        .button:hover{
+           text-decoration: underline;
+           color: black;
+        }
         
     </style>
 </head>
@@ -360,13 +392,11 @@
     <div id="menu">
         <div class="subsection title2">Menu
             
-              
-            <p>
-            <a href="Crumbs_Desserts.html" target="_blank"> Desserts </a>
-            <a href="Crumbs_Cakes.html" target="_blank"> Cakes </a> 
-            </p>
-
-        </div>
+            <div class="container">
+                  <div class="button"> <a href="Crumbs_Cakes.html" target="_blank"> Cakes </a></div>
+                  <div class="button"> <a href="Crumbs_Desserts.html" target="_blank"> Desserts </a></div>
+            </div>
+         </div>
     </div>
     <br>
     <br>
@@ -396,17 +426,14 @@
     <div id="contact">
         <div class="subsection title2">
             Contact
-           
+           <div class="contactmap">
             <div class="location">
                  2741 W 4th Ave, Vancouver, BC 
                 <br><br>
-                crumbsbakery@gmail.com
+                Crumbsbakery@gmail.com
                 <br><br>
                 604.432.5463 
-            </div>
-            
-            <div id="map"></div> 
-            
+
             <div class="icons">
                 <a href="https://www.instagram.com/?hl=en" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/sympletts-part-2/128/circle-social-instagram-512.png" alt="Insta" style='width:100px;height:100px;'/></a>
                     
@@ -415,11 +442,13 @@
                     
                     
                 <a href="https://www.facebook.com/" target="_blank"><img src='https://cdn3.iconfinder.com/data/icons/sympletts-part-2/128/circle-social-facebook-512.png' alt="Facebook" style='width:100px;height:100px;'/></a>
-
-
+                </div>
+                </div>
+                <div id="map"></div> 
+            </div>
             </div>
         </div>
-    </div>
+
     
     <div id="profile">
         <div class="section sectionthree title">
