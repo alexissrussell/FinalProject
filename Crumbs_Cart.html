@@ -1,0 +1,327 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Crumbs Checkout </title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300');
+        
+        @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+        
+        body{
+            background-image: url('HPBackground.jpg');
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;}
+        
+        
+        .wrap {
+            width: 1140px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-content: flex-start;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;}
+        
+        
+       header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+        }
+        
+        header img {
+            width: 12%;
+            height: 12%;
+        }
+        
+        .nav ul {
+            list-style-type: none;
+            display: inline;}
+        
+        .nav li {
+            width: 110px;
+            font-size: 16pt;
+            font-family: 'Nunito Sans', sans-serif;
+            color: white;
+            display: inline-block;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: .2s;
+        }
+        
+        .nav a:hover {
+            color:#FEC0CB;
+        }
+        
+        .title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 80pt;
+            color: white;
+            text-align-last: left;}
+        
+        .info{
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18pt;
+            color: white;}
+        
+        .name{
+            font-family: 'Nunito Sans', sans-serif;
+            color: #edcbd5;
+            font-size: 26pt;}
+    
+
+        fieldset {
+                border: 3px solid white;
+                margin: 02px;
+                max-width: 0;
+                padding: 5px 10px 0px;
+                transition: all 0.25s;
+        }
+        .one{
+            padding-bottom: 54%;
+        }
+        
+        .two{
+            padding-bottom: 27%;
+        }
+        
+        .three{
+            padding-top: 4%;
+     
+        }
+            fieldset:hover {border: 3px solid rgba(237,203,213,1);}
+
+            legend {
+                font-family: 'Nunito Sans', sans-serif;
+                color: #edcbd5;
+                font-size: 30pt;
+                padding: 0 10px;
+            }
+
+            input, textarea {
+                border: none;
+                font-family: 'Nunito Sans', sans-serif;
+                font-size: 16pt;
+                color: grey;
+                margin: 10px;
+                
+                padding: 10px;
+                transition: all 0.25s;
+            }
+
+            .halfWidthInput {
+                width: 200px;
+            }
+
+            .fullWidthInput {
+                width: 500px;
+            }
+
+            input:focus, textarea:focus {
+                outline: rgba(237,203,213,1);} solid 1px;
+                outline-offset: 0;
+            }
+
+            input[type="color"] {
+                height: 30px; width: 140px;
+            }
+
+            textarea {resize: vertical;}
+
+            input[type="submit"] {
+                background-color: darkgrey;
+                color: rgba(255,255,255,1);
+                outline: none;
+                min-width: 300px;
+                ;}        
+        
+            ul {list-style-type: none;}
+        
+        .wwrap {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 75%;
+            margin-left: -8%;}
+        
+        
+        .btn {
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            width: 230px;
+            cursor: pointer;
+        }
+        
+        .btn-one {
+            color: #FFF;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .btn-one span {
+            transition: all 0.3s;
+        }
+        
+        .btn-one::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-top-color: rgba(255, 255, 255, 0.5);
+            border-bottom-color: rgba(255, 255, 255, 0.5);
+            transform: scale(0.1, 1);
+        }
+        
+        .btn-one:hover span {
+            letter-spacing: 2px;
+        }
+        
+        .btn-one:hover::before {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+        
+        .btn-one::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-one:hover::after {
+            opacity: 0;
+            transform: scale(0.1, 1);
+        }
+        
+        
+        
+        .confirm{
+            float: right;
+            padding-top: 1%;
+            padding-right: 14%;
+            padding-bottom: 3%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16pt;
+        }
+    
+       
+@media screen and (max-width:1200px){
+    .wwrap{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+        }
+ 
+        
+    </style>
+</head>
+
+<body>
+
+    <header class="header__wrap">
+        <div class="wrap nav">
+        
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="index.html">About</a> </li>
+                
+            </ul>
+                <img src="Crumbs_Logo.png" alt="LOGO" />
+                <ul>
+                <li><a href="index.html">Contact</a>
+                <li class="Login"><a href="index.html">Profile</a></li>
+                <li class="Cart">
+                    <a href="#">Checkout</a></li>
+            </ul>  
+        </div>
+    </header>
+    <br>
+    <br><br><br><br><br><br><br><br>
+    <div class="title">
+        CHECKOUT
+    </div>
+
+      <div class="wwrap">
+   
+   
+    <div>
+    
+<form>
+    <fieldset>
+       <div class="one">
+        <legend>User Info</legend>
+        <input class="halfWidthInput" type="text" name="name" placeholder="USERNAME"> 
+        <input class="halfWidthInput" type="text" name="name" placeholder="EMAIL"> 
+        <input class="halfWidthInput" type="text" name="name" placeholder="PASSWORD">   
+             
+        </div>
+    </fieldset>
+     </form></div>
+           
+    <div><form>
+    <fieldset>
+       <div class="two">
+        <legend>Billing Details</legend>
+        <input class="halfWidthInput" type="text" name="name" placeholder="CARDHOLDER NAME">
+        <input class="halfWidthInput" type="number" name="CC" placeholder="CREDIT CARD &#35;">
+        <input class="halfWidthInput" type="date" name="EXPIRY DATE">
+        <input class="halfWidthInput" type="number" name="CVV" placeholder="CCV">
+    </div>
+    </fieldset>
+    </form></div> 
+
+   <div> <form>
+    <fieldset>
+       <div class="three">
+        <legend>Date &amp; Time</legend>
+        <textarea class="fullWidthInput" type="text" name="message" placeholder="Please tell us when you would like to pick up your order."></textarea>
+    </div>
+    </fieldset>
+  <br><br>
+     <fieldset>
+         <div class="four">
+        <legend>Cart</legend>
+        <textarea class="fullWidthInput" type="text" name="message" placeholder="All items added to cart will show here."></textarea>
+         </div>
+    </fieldset>
+    </form></div>
+    </div>
+    <div class="confirm">
+    <div class="btn btn-one">
+    <span>Place Order</span>
+    </div> 
+    </div>
+    </body>
+</html>

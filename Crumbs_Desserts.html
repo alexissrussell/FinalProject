@@ -1,0 +1,175 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Crumbs Desserts </title>
+    <link rel="stylesheet" href="normalize.css" type="text/css">
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300');
+        
+        @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+        
+        body{
+            background-image: url("HPBackground.jpg");
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;}
+        
+        
+        .wrap {
+            width: 1140px;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-content: flex-start;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;}
+        
+        
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .7);
+        }
+        
+        header img {
+            width: 12%;
+            height: 12%;
+        }
+        
+        .nav ul {
+            list-style-type: none;
+            display: inline;}
+        
+        .nav li {
+            width: 110px;
+            font-size: 16pt;
+            font-family: 'Nunito Sans', sans-serif;
+            color: white;
+            display: inline-block;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            transition: .2s;
+        }
+        
+        .nav a:hover {
+            color:#FEC0CB;
+        }
+        
+        .title {
+           font-family: 'Permanent Marker', cursive;
+            font-size: 100pt;
+            color: white;
+            text-align-last: left;
+            margin-top: -40px;
+            margin-left: 2%;}
+        
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 55%;
+            margin: 0 auto;
+            padding-bottom: 5%;
+            padding-left: 5%;}
+        
+        .description{
+           font-family: 'Nunito Sans', sans-serif;
+            font-size: 16pt;
+            color: white;
+            text-shadow: 2px 2px black;}
+        
+        .items {
+            font-family: 'Nunito Sans', sans-serif;
+            color: #edcbd5;
+            font-size: 27pt;
+            text-shadow: 1px 1px black;
+        }
+    
+        
+        .textbox{
+            background-color: rgba(0, 0, 0, .7);
+            padding-top: 5%;
+            padding-right: 5%;}
+          
+        button{ 
+            width: 15%;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 85%;
+            border-color: white;
+            background-color: white;
+            }
+        
+         </style>
+</head>
+
+<body>
+
+    <header class="header__wrap">
+        <div class="wrap nav">
+        
+           <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="index.html">About</a> </li>
+                
+            </ul>
+               
+                <img src="Crumbs_Logo.png" alt="LOGO" />
+                <ul>
+                <li><a href="index.html">Contact</a>
+                <li class="Login"><a href="index.html">Profile</a></li>
+                <li class="Cart">
+                    <a href="Crumbs_Cart.html">Checkout</a></li>
+            </ul>  
+        </div>
+    </header>
+    <br>
+    <br><br><br><br><br><br><br><br>
+    <div class="title">Desserts </div>
+        <br>
+        <div class="menu textbox">
+        
+        <div class="items itemstop">
+        Choocalte Chunk Cookie &#36; 8.00  
+         <div class="description">
+          "Mix of milk and dark chocolate chunks inside the chewy soft cookie."</div> </div> <br>
+          <button type="button" onclick="alert('Added to Cart!')">Add to Cart</button>
+          
+    
+      
+       
+        <div class="items"> 
+         Vanilaa Cupcake &#36; 15.00
+        <div class="description">
+        "A vanilla cupcake that will melt in your mouth. Topped with real gold flakes" 
+        </div></div><br> 
+        <button type="button" onclick="alert('Added to Cart!')">Add to Cart</button>
+      
+                
+        <div class="items">Belgain Chocolate Brownie &#36; 12.50
+        <div class="description">
+             "The perfect bite of dark chocolate and the tiniest hint of crunch to the crust"
+             </div></div> <br>
+             <button type="button" onclick="alert('Added to Cart!')">Add to Cart</button>
+             
+        </div>    
+        <br>
+        <br> 
+    
+    </body>
+</html>
